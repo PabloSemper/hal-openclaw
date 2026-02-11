@@ -1,0 +1,10 @@
+.replicate-api-key
+.tuya-credentials.json
+.env
+.env.local
+node_modules/
+*.db
+memory.db
+vector_store.db
+.clawhub
+.clawdhub

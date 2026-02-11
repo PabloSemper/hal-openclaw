@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "skills": {
+    "prompt-guard": {
+      "version": "3.1.0",
+      "installedAt": 1770763898776
+    },
+    "dont-hack-me": {
+      "version": "1.0.1",
+      "installedAt": 1770763908026
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1770763972809
+    },
+    "web-search-plus": {
+      "version": "2.6.2",
+      "installedAt": 1770763981334
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1770764244276
+    },
+    "agent-browser-tekken": {
+      "version": "0.8.6",
+      "installedAt": 1770764265260
+    },
+    "web-scraper": {
+      "version": "1.0.0",
+      "installedAt": 1770764972083
+    },
+    "nano-banana-ultra": {
+      "version": "1.0.1",
+      "installedAt": 1770765075366
+    },
+    "readme-generator": {
+      "version": "1.1.0",
+      "installedAt": 1770765086827
+    },
+    "db-backup": {
+      "version": "1.1.0",
+      "installedAt": 1770765094479
+    },
+    "camsnap": {
+      "version": "1.0.0",
+      "installedAt": 1770765310945
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1770765317997
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1770765325356
+    },
+    "openai-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1770765333180
+    },
+    "binance-pro": {
+      "version": "1.0.0",
+      "installedAt": 1770765453752
+    },
+    "binance-hunter": {
+      "version": "1.0.0",
+      "installedAt": 1770765465494
+    },
+    "predictme": {
+      "version": "1.2.0",
+      "installedAt": 1770765477000
+    }
+  }
+}
