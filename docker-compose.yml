@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # HAL OpenClaw Main Service
+  hal:
+    build: .
+    container_name: hal-openclaw
+    hostname: hal
+    environment:
+      - OPENCLAW_MODE=production
+      - OLLAMA_HOST=http://ollama:11434
+    ports:
+      - "22:22"        # SSH
+      - "18789:18789"  # OpenClaw Gateway
+    volumes:
+      - ./memory:/home/pablo/clawd/memory
+      - ./MEMORY.md:/home/pablo/clawd/MEMORY.md
+      - ./SOUL.md:/home/pablo/clawd/SOUL.md
+      - ./TOOLS.md:/home/pablo/clawd/TOOLS.md
+      - ./USER.md:/home/pablo/clawd/USER.md
+      - ./AGENTS.md:/home/pablo/clawd/AGENTS.md
+      - ~/.ssh:/home/pablo/.ssh:ro  # Inject SSH keys if needed
+    networks:
+      - hal-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:18789/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Ollama Embeddings Service (Optional)
+  ollama:
+    image: ollama/ollama:latest
+    container_name: hal-ollama
+    hostname: ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0:11434
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    networks:
+      - hal-network
+    restart: unless-stopped
+    command: serve
+
+networks:
+  hal-network:
+    driver: bridge
+
+volumes:
+  ollama-data:
+    driver: local
