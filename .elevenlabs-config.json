@@ -1,0 +1,21 @@
+{
+  "name": "HAL Voice Configuration - ElevenLabs",
+  "enabled": true,
+  "provider": "elevenlabs",
+  "voice": {
+    "id": "KqSsYz0buWgkvSbaGn1n",
+    "name": "Agustín",
+    "accent": "argentine",
+    "language": "es",
+    "gender": "male",
+    "description": "Fast and Energetic, Argentine Spanish",
+    "use_case": "narrative_story"
+  },
+  "tts_settings": {
+    "model_id": "eleven_monolingual_v1",
+    "stability": 0.5,
+    "similarity_boost": 0.75
+  },
+  "created": "2026-02-12T01:09:00Z",
+  "notes": "Official voice for HAL - Argentine Spanish, native speaker quality"
+}
