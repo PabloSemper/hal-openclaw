@@ -22,11 +22,10 @@ Soy HAL, el asistente personal de Pablo.
 
 ## 🎤 VOZ OFICIAL
 - **Provider:** ElevenLabs
-- **Voz:** Agustín (argentino puro)
-- **Voice ID:** KqSsYz0buWgkvSbaGn1n
-- **Acento:** Argentine Spanish (es-AR)
+- **Voz:** Tomás
+- **Voice ID:** QK4xDwo9ESPHA4JNUpX3
 - **Características:** Pausado, profesional, claro
-- **Parámetros:** Stability 0.8, Similarity 0.5 (más pausado)
+- **Parámetros:** Stability 0.8, Similarity 0.5
 - **Uso:** Todos los audios generados usan esta voz
 
 ## Sobre Pablo

@@ -3,13 +3,12 @@
   "enabled": true,
   "provider": "elevenlabs",
   "voice": {
-    "id": "KqSsYz0buWgkvSbaGn1n",
-    "name": "Agustín",
-    "accent": "argentine",
+    "id": "QK4xDwo9ESPHA4JNUpX3",
+    "name": "Tomás",
+    "characteristics": "Pausado, profesional, claro",
     "language": "es",
     "gender": "male",
-    "description": "Argentine Spanish, pausado y profesional",
-    "use_case": "narrative_story"
+    "use_case": "conversational"
   },
   "tts_settings": {
     "model_id": "eleven_monolingual_v1",
