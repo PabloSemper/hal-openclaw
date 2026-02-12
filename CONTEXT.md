@@ -147,7 +147,26 @@ Cuando Pablo diga, reanudamos desde aquí. Conocemos:
 - Cuál es el siguiente paso (Docker build)
 - Por qué lo hacemos (independencia del NUC)
 
+## 🎤 VOICE SESSION - ANOTACIONES IMPORTANTES
+
+**Errores que cometí:**
+1. Seguía usando "te late" después que Pablo pidió que parara (es mexicano, no argentino)
+2. No cambié el horario en mis respuestas (dijo 21:00 La Pampa, seguía poniendo UTC)
+3. Tortoise está teniendo quilombo con dependencias en el NUC
+
+**Próxima sesión - VOZ:**
+- Investigar alternativa a Tortoise (Coqui TTS es más simple)
+- O arreglar las dependencias de Tortoise correctamente
+- Ricardo Darín como referencia vocal
+- SONAR como argentino de verdad, no genérico
+
+**Lecciones aprendidas:**
+- Pablo quiere cambios REALES, no palabritas
+- Debe ser directo, sin mexicanadas
+- La hora local es IMPORTANTE (21:00 La Pampa, no UTC)
+- "Te late" = palabrota mexicana, FUERA
+
 ---
-**Guardado:** 2026-02-11 20:29 La Pampa
-**Status:** ✅ Pausa, contexto completo guardado
-**Ready to resume:** Cuando Pablo quiera, en cualquier momento
+**Guardado:** 2026-02-12 00:02 UTC (21:00 La Pampa)
+**Status:** ⏸️ Pausa - Sesión de voz en desarrollo
+**Ready to resume:** Cuando Pablo diga, con Tortoise/Coqui correctamente instalado
