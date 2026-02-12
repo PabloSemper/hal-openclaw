@@ -3,18 +3,18 @@
   "enabled": true,
   "provider": "elevenlabs",
   "voice": {
-    "id": "QK4xDwo9ESPHA4JNUpX3",
-    "name": "Custom Voice",
-    "characteristics": "Pausado, profesional, claro",
+    "id": "KqSsYz0buWgkvSbaGn1n",
+    "name": "Agustín",
+    "accent": "argentine",
     "language": "es",
     "gender": "male",
-    "tone": "Directo, sin groserías",
-    "use_case": "conversational"
+    "description": "Argentine Spanish, pausado y profesional",
+    "use_case": "narrative_story"
   },
   "tts_settings": {
     "model_id": "eleven_monolingual_v1",
-    "stability": 0.5,
-    "similarity_boost": 0.75
+    "stability": 0.8,
+    "similarity_boost": 0.5
   },
   "created": "2026-02-12T01:09:00Z",
   "notes": "Official voice for HAL - Argentine Spanish, native speaker quality"
