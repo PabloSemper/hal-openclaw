@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.26",
+    "lastTouchedAt": "2026-03-01T22:32:38.171Z"
+  },
+  "env": {
+    "OPENROUTER_API_KEY": "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"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-01T22:32:38.146Z",
+    "lastRunVersion": "2026.2.26",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      },
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.3-codex",
+        "fallbacks": [
+          "openai-codex/gpt-5.3-codex"
+        ]
+      },
+      "models": {
+        "anthropic/claude-haiku-4-5": {},
+        "openai-codex/gpt-5.3-codex": {}
+      },
+      "workspace": "/home/pablo/.openclaw/workspace",
+      "bootstrapMaxChars": 130000,
+      "bootstrapTotalMaxChars": 300000,
+      "compaction": {
+        "mode": "safeguard",
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 50000,
+          "prompt": "Distill this session to memory/YYYY-MM-DD.md. Focus on decisions, state changes, scripts modified, configurations changed, employee observations. If nothing worth storing: NO_FLUSH",
+          "systemPrompt": "Extract only what is worth remembering long-term. No fluff. Be specific with names, paths, and values."
+        }
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "perplexity",
+        "perplexity": {
+          "apiKey": "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",
+          "baseUrl": "https://openrouter.ai/api/v1",
+          "model": "perplexity/sonar-pro-search"
+        }
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "whatsapp": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "selfChatMode": false,
+      "groupPolicy": "allowlist",
+      "debounceMs": 0,
+      "mediaMaxMb": 50
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "70be85bd4031ec62b7f451b853afecceb5dff088ca24508d"
+    },
+    "trustedProxies": [
+      "127.0.0.1",
+      "::1"
+    ],
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "remote": {
+      "url": "ws://127.0.0.1:18789"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "whatsapp": {
+        "enabled": true
+      }
+    }
+  }
+}
