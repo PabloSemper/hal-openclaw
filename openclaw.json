@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.23-2",
-    "lastTouchedAt": "2026-03-28T01:31:29.493Z"
+    "lastTouchedAt": "2026-03-28T17:55:45.135Z"
   },
   "env": {
     "OPENROUTER_API_KEY": "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"
@@ -53,7 +53,11 @@
         ]
       },
       "models": {
-        "anthropic/claude-haiku-4-5": {},
+        "anthropic/claude-haiku-4-5": {
+          "params": {
+            "cacheRetention": "short"
+          }
+        },
         "openai-codex/gpt-5.3-codex": {},
         "ollama/qwen2.5:1.5b": {},
         "ollama/qwen2.5:3b": {},
@@ -62,6 +66,10 @@
       "workspace": "/home/pablo/.openclaw/workspace",
       "bootstrapMaxChars": 130000,
       "bootstrapTotalMaxChars": 300000,
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
       "compaction": {
         "mode": "safeguard",
         "memoryFlush": {
@@ -140,7 +148,11 @@
     }
   },
   "session": {
-    "dmScope": "per-channel-peer"
+    "dmScope": "per-channel-peer",
+    "reset": {
+      "mode": "idle",
+      "idleMinutes": 10080
+    }
   },
   "channels": {
     "whatsapp": {
@@ -214,7 +226,38 @@
             "model": "perplexity/sonar-pro-search"
           }
         }
+      },
+      "lossless-claw": {
+        "enabled": true,
+        "config": {
+          "freshTailCount": 32,
+          "contextThreshold": 0.75,
+          "incrementalMaxDepth": -1,
+          "ignoreSessionPatterns": [
+            "agent:*:cron:**"
+          ],
+          "summaryModel": "anthropic/claude-haiku-4-5",
+          "expansionModel": "anthropic/claude-haiku-4-5"
+        }
       }
+    },
+    "installs": {
+      "lossless-claw": {
+        "source": "npm",
+        "spec": "@martian-engineering/lossless-claw",
+        "installPath": "/home/pablo/.openclaw/extensions/lossless-claw",
+        "version": "0.5.2",
+        "resolvedName": "@martian-engineering/lossless-claw",
+        "resolvedVersion": "0.5.2",
+        "resolvedSpec": "@martian-engineering/lossless-claw@0.5.2",
+        "integrity": "sha512-z1XP+czeRyyB31Mb3W++kXlldTisi9Ttqh25ggrm7rGMqBGpWxJ+sVAMGAHdKgSZTVmj8wOOVyMfEW9IHI6K+g==",
+        "shasum": "246d1a75bda9140ae47e57a0a987d0f8ac25abe4",
+        "resolvedAt": "2026-03-28T17:54:45.992Z",
+        "installedAt": "2026-03-28T17:55:40.706Z"
+      }
+    },
+    "slots": {
+      "contextEngine": "lossless-claw"
     }
   }
 }
