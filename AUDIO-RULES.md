@@ -21,10 +21,11 @@ Texto WhatsApp → Process → Generate response → Texto WhatsApp
 ## CONFIGURACIÓN
 
 **Voz Oficial:**
-- ID: `KqSsYz0buWgkvSbaGn1n`
-- Nombre: **Agustín**
+- ID: `QK4xDwo9ESPHA4JNUpX3`
+- Nombre: **Tomás**
 - Acento: **Argentine Spanish (es-AR)**
 - Género: **Masculino**
+- Características: Pausado, profesional, claro
 
 **STT (Speech to Text):**
 - Herramienta: **Whisper OpenAI**
@@ -33,8 +34,10 @@ Texto WhatsApp → Process → Generate response → Texto WhatsApp
 
 **TTS (Text to Speech):**
 - Provider: **ElevenLabs**
-- Modelo: `eleven_monolingual_v1`
-- Voz: **Agustín**
+- Modelo: `eleven_multilingual_v2`
+- Voz: **Tomás**
+- Stability: 0.75
+- Similarity: 0.75
 
 ---
 

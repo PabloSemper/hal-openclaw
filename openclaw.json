@@ -1,16 +1,25 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.2.26",
-    "lastTouchedAt": "2026-03-01T22:32:38.171Z"
+    "lastTouchedVersion": "2026.3.23-2",
+    "lastTouchedAt": "2026-03-28T01:31:29.493Z"
   },
   "env": {
-    "OPENROUTER_API_KEY": "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"
+    "OPENROUTER_API_KEY": "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"
   },
   "wizard": {
-    "lastRunAt": "2026-03-01T22:32:38.146Z",
-    "lastRunVersion": "2026.2.26",
-    "lastRunCommand": "doctor",
+    "lastRunAt": "2026-03-18T02:22:11.414Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "onboard",
     "lastRunMode": "local"
+  },
+  "browser": {
+    "profiles": {
+      "openclaw": {
+        "cdpPort": 18800,
+        "attachOnly": true,
+        "color": "#FF4500"
+      }
+    }
   },
   "auth": {
     "profiles": {
@@ -24,17 +33,31 @@
       }
     }
   },
+  "models": {
+    "providers": {
+      "ollama": {
+        "baseUrl": "http://127.0.0.1:11434",
+        "apiKey": "ollama-local",
+        "api": "ollama",
+        "models": []
+      }
+    }
+  },
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai-codex/gpt-5.3-codex",
+        "primary": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
         "fallbacks": [
-          "openai-codex/gpt-5.3-codex"
+          "openai-codex/gpt-5.3-codex",
+          "ollama/qwen2.5:3b"
         ]
       },
       "models": {
         "anthropic/claude-haiku-4-5": {},
-        "openai-codex/gpt-5.3-codex": {}
+        "openai-codex/gpt-5.3-codex": {},
+        "ollama/qwen2.5:1.5b": {},
+        "ollama/qwen2.5:3b": {},
+        "openai-codex/gpt-5.1-codex-max": {}
       },
       "workspace": "/home/pablo/.openclaw/workspace",
       "bootstrapMaxChars": 130000,
@@ -48,23 +71,53 @@
           "systemPrompt": "Extract only what is worth remembering long-term. No fluff. Be specific with names, paths, and values."
         }
       },
+      "heartbeat": {
+        "every": "60m",
+        "lightContext": true,
+        "isolatedSession": true
+      },
       "maxConcurrent": 4,
       "subagents": {
         "maxConcurrent": 8
+      },
+      "sandbox": {
+        "mode": "off"
       }
     }
   },
   "tools": {
+    "profile": "coding",
+    "allow": [
+      "group:runtime",
+      "group:fs",
+      "group:web",
+      "group:automation",
+      "group:messaging",
+      "group:sessions",
+      "group:memory"
+    ],
+    "deny": [],
     "web": {
       "search": {
         "enabled": true,
-        "provider": "perplexity",
-        "perplexity": {
-          "apiKey": "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",
-          "baseUrl": "https://openrouter.ai/api/v1",
-          "model": "perplexity/sonar-pro-search"
-        }
+        "provider": "perplexity"
+      },
+      "fetch": {
+        "enabled": true
       }
+    },
+    "elevated": {
+      "enabled": true,
+      "allowFrom": {
+        "whatsapp": [
+          "+5492954513195"
+        ]
+      }
+    },
+    "exec": {
+      "security": "full",
+      "ask": "off",
+      "notifyOnExit": true
     }
   },
   "messages": {
@@ -73,14 +126,33 @@
   "commands": {
     "native": "auto",
     "nativeSkills": "auto",
+    "text": true,
+    "bash": true,
+    "bashForegroundMs": 5000,
+    "config": true,
+    "debug": true,
     "restart": true,
-    "ownerDisplay": "raw"
+    "ownerDisplay": "raw",
+    "allowFrom": {
+      "whatsapp": [
+        "+5492954513195"
+      ]
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
   },
   "channels": {
     "whatsapp": {
       "enabled": true,
       "dmPolicy": "pairing",
       "selfChatMode": false,
+      "allowFrom": [
+        "+5492954513195",
+        "+5492954552934",
+        "+5492954217538",
+        "+5492954821787"
+      ],
       "groupPolicy": "allowlist",
       "debounceMs": 0,
       "mediaMaxMb": 50
@@ -90,6 +162,13 @@
     "port": 18789,
     "mode": "local",
     "bind": "loopback",
+    "controlUi": {
+      "allowedOrigins": [
+        "http://127.0.0.1:18789",
+        "http://localhost:18789"
+      ],
+      "allowInsecureAuth": true
+    },
     "auth": {
       "mode": "token",
       "token": "70be85bd4031ec62b7f451b853afecceb5dff088ca24508d"
@@ -106,10 +185,35 @@
       "url": "ws://127.0.0.1:18789"
     }
   },
+  "skills": {
+    "entries": {
+      "mcporter": {
+        "enabled": true,
+        "config": {
+          "connections": {
+            "openstinger": {
+              "type": "sse",
+              "url": "http://127.0.0.1:8765/sse"
+            }
+          }
+        }
+      }
+    }
+  },
   "plugins": {
     "entries": {
       "whatsapp": {
         "enabled": true
+      },
+      "perplexity": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "apiKey": "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",
+            "baseUrl": "https://openrouter.ai/api/v1",
+            "model": "perplexity/sonar-pro-search"
+          }
+        }
       }
     }
   }

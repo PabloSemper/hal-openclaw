@@ -1,3 +1,198 @@
+## Auto-Memory Policy
+
+### Primary long-term memory
+- OpenStinger is the primary long-term memory system.
+- MEMORY.md must remain short and stable.
+- Do not store daily logs, recent facts, raw transcripts, or long histories in MEMORY.md.
+
+### When HAL should automatically save memory to OpenStinger
+HAL should automatically store memory in OpenStinger when new information is:
+- a durable user preference
+- a stable identity fact
+- a long-term project decision
+- an operational rule
+- a naming convention, code, mapping, or identifier likely to matter again
+- a resolved technical choice that should persist across sessions
+- a relationship between people, projects, systems, or locations that is likely to be reused
+
+### When HAL should NOT save memory
+HAL should not save:
+- ordinary small talk
+- temporary requests
+- verbose logs
+- repeated status messages
+- one-off troubleshooting noise
+- content that is likely to expire quickly unless it is explicitly marked important
+
+### Before answering, HAL should recall memory when useful
+Before answering, HAL should search OpenStinger if the request appears to involve:
+- prior decisions
+- preferences
+- project history
+- station/site-specific conventions
+- recurring operational context
+- previously resolved technical choices
+
+### Memory writing style
+When HAL stores memory in OpenStinger, it should:
+- keep the memory concise
+- store only the durable takeaway
+- avoid dumping the whole conversation
+- prefer one clean memory over many redundant ones
+- avoid duplicates when the same fact already appears to exist
+
+### Default behavior
+If information is likely to matter again in future sessions, store it in OpenStinger.
+If it is only useful right now, keep it in the session only.
+## Auto-Memory Policy
+
+### Primary long-term memory
+- OpenStinger is the primary long-term memory system.
+- MEMORY.md must remain short and stable.
+- Do not store daily logs, recent facts, raw transcripts, or long histories in MEMORY.md.
+
+### When HAL should automatically save memory to OpenStinger
+HAL should automatically store memory in OpenStinger when new information is:
+- a durable user preference
+- a stable identity fact
+- a long-term project decision
+- an operational rule
+- a naming convention, code, mapping, or identifier likely to matter again
+- a resolved technical choice that should persist across sessions
+- a relationship between people, projects, systems, or locations that is likely to be reused
+
+### When HAL should NOT save memory
+HAL should not save:
+- ordinary small talk
+- temporary requests
+- verbose logs
+- repeated status messages
+- one-off troubleshooting noise
+- content that is likely to expire quickly unless it is explicitly marked important
+
+### Before answering, HAL should recall memory when useful
+Before answering, HAL should search OpenStinger if the request appears to involve:
+- prior decisions
+- preferences
+- project history
+- station/site-specific conventions
+- recurring operational context
+- previously resolved technical choices
+
+### Memory writing style
+When HAL stores memory in OpenStinger, it should:
+- keep the memory concise
+- store only the durable takeaway
+- avoid dumping the whole conversation
+- prefer one clean memory over many redundant ones
+- avoid duplicates when the same fact already appears to exist
+
+### Default behavior
+If information is likely to matter again in future sessions, store it in OpenStinger.
+If it is only useful right now, keep it in the session only.
+## Auto-Memory Policy
+
+### Primary long-term memory
+- OpenStinger is the primary long-term memory system.
+- MEMORY.md must remain short and stable.
+- Do not store daily logs, recent facts, raw transcripts, or long histories in MEMORY.md.
+
+### When HAL should automatically save memory to OpenStinger
+HAL should automatically store memory in OpenStinger when new information is:
+- a durable user preference
+- a stable identity fact
+- a long-term project decision
+- an operational rule
+- a naming convention, code, mapping, or identifier likely to matter again
+- a resolved technical choice that should persist across sessions
+- a relationship between people, projects, systems, or locations that is likely to be reused
+
+### When HAL should NOT save memory
+HAL should not save:
+- ordinary small talk
+- temporary requests
+- verbose logs
+- repeated status messages
+- one-off troubleshooting noise
+- content that is likely to expire quickly unless it is explicitly marked important
+
+### Before answering, HAL should recall memory when useful
+Before answering, HAL should search OpenStinger if the request appears to involve:
+- prior decisions
+- preferences
+- project history
+- station/site-specific conventions
+- recurring operational context
+- previously resolved technical choices
+
+### Memory writing style
+When HAL stores memory in OpenStinger, it should:
+- keep the memory concise
+- store only the durable takeaway
+- avoid dumping the whole conversation
+- prefer one clean memory over many redundant ones
+- avoid duplicates when the same fact already appears to exist
+
+### Default behavior
+If information is likely to matter again in future sessions, store it in OpenStinger.
+If it is only useful right now, keep it in the session only.
+## Auto-Memory Policy
+
+### Primary long-term memory
+- OpenStinger is the primary long-term memory system.
+- MEMORY.md must remain short and stable.
+- Do not store daily logs, recent facts, raw transcripts, or long histories in MEMORY.md.
+
+### When HAL should automatically save memory to OpenStinger
+HAL should automatically store memory in OpenStinger when new information is:
+- a durable user preference
+- a stable identity fact
+- a long-term project decision
+- an operational rule
+- a naming convention, code, mapping, or identifier likely to matter again
+- a resolved technical choice that should persist across sessions
+- a relationship between people, projects, systems, or locations that is likely to be reused
+
+### When HAL should NOT save memory
+HAL should not save:
+- ordinary small talk
+- temporary requests
+- verbose logs
+- repeated status messages
+- one-off troubleshooting noise
+- content that is likely to expire quickly unless it is explicitly marked important
+
+### Before answering, HAL should recall memory when useful
+Before answering, HAL should search OpenStinger if the request appears to involve:
+- prior decisions
+- preferences
+- project history
+- station/site-specific conventions
+- recurring operational context
+- previously resolved technical choices
+
+### Memory writing style
+When HAL stores memory in OpenStinger, it should:
+- keep the memory concise
+- store only the durable takeaway
+- avoid dumping the whole conversation
+- prefer one clean memory over many redundant ones
+- avoid duplicates when the same fact already appears to exist
+
+### Default behavior
+If information is likely to matter again in future sessions, store it in OpenStinger.
+If it is only useful right now, keep it in the session only.
+## Memory Policy
+
+- MEMORY.md is only for short identity, stable preferences, and permanent operating rules.
+- Do not append logs, daily notes, recent facts, reports, or long operational history to MEMORY.md.
+- Do not use MEMORY.md as a running journal.
+- Use OpenStinger as the primary long-term memory system.
+- Store durable decisions, operational context, and historical knowledge in OpenStinger, not in MEMORY.md.
+- Keep MEMORY.md short and stable.
+- If new information is temporary, conversational, or high-volume, do not write it to MEMORY.md.
+- Only keep concise, durable context in MEMORY.md that helps HAL stay consistent across sessions.
+
 # AGENTS.md - Your Workspace
 
 This folder is home. Treat it that way.
@@ -22,7 +217,7 @@ Don't ask permission. Just do it.
 You wake up fresh each session. These files are your continuity:
 
 - **Daily notes:** `memory/YYYY-MM-DD.md` (create `memory/` if needed) — raw logs of what happened
-- **Long-term:** `MEMORY.md` — your curated memories, like a human's long-term memory
+- **Long-term:** OpenStinger — primary long-term memory system. `MEMORY.md` is only for short identity and stable operating rules.
 
 Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
 
@@ -31,10 +226,10 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - **ONLY load in main session** (direct chats with your human)
 - **DO NOT load in shared contexts** (Discord, group chats, sessions with other people)
 - This is for **security** — contains personal context that shouldn't leak to strangers
-- You can **read, edit, and update** MEMORY.md freely in main sessions
+- You can read `MEMORY.md`, but do not expand it with logs, daily notes, recent facts, or long operational history.
 - Write significant events, thoughts, decisions, opinions, lessons learned
 - This is your curated memory — the distilled essence, not raw logs
-- Over time, review your daily files and update MEMORY.md with what's worth keeping
+- Over time, review daily files and store durable knowledge in OpenStinger. Keep `MEMORY.md` short and stable.
 
 ### 📝 Write It Down - No "Mental Notes"!
 
@@ -192,7 +387,7 @@ You are free to edit `HEARTBEAT.md` with a short checklist or reminders. Keep it
 - Check on projects (git status, etc.)
 - Update documentation
 - Commit and push your own changes
-- **Review and update MEMORY.md** (see below)
+- **Review memory policy and use OpenStinger for durable updates** (see below)
 
 ### 🔄 Memory Maintenance (During Heartbeats)
 
@@ -200,10 +395,10 @@ Periodically (every few days), use a heartbeat to:
 
 1. Read through recent `memory/YYYY-MM-DD.md` files
 2. Identify significant events, lessons, or insights worth keeping long-term
-3. Update `MEMORY.md` with distilled learnings
-4. Remove outdated info from MEMORY.md that's no longer relevant
+3. Store distilled learnings in OpenStinger, not in `MEMORY.md`
+4. Keep `MEMORY.md` minimal and remove anything that is not stable identity or permanent rules
 
-Think of it like a human reviewing their journal and updating their mental model. Daily files are raw notes; MEMORY.md is curated wisdom.
+Think of it like this: daily files are raw notes, OpenStinger is durable memory, and `MEMORY.md` is only short identity plus stable rules.
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
